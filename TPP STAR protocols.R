@@ -27,14 +27,16 @@ colnames(treated_b) <- c("gene_name",	"rel_fc_131L", "rel_fc_130H", "rel_fc_130L
 
 
 #Step 65: Plot the protein abundance per temperature in a boxplot.
+windowsFonts(A = windowsFont("Arial"))
+par(family = "A")
 #Control A
-boxplot(control_a[2:11], ylim=c(0, 1.2), ylab="Protein relative abundance", xlab="Temperature", names=c(33,37,41,45,49,53,57,61,65,69))
+boxplot(control_a[2:11], ylim=c(0, 1.2), ylab="Protein relative abundance", xlab="Temperature (°C)", names=c(33,37,41,45,49,53,57,61,65,69))
 #Control B
-boxplot(control_b[2:11], ylim=c(0, 1.2), ylab="Protein relative abundance", xlab="Temperature", names=c(33,37,41,45,49,53,57,61,65,69))
+boxplot(control_b[2:11], ylim=c(0, 1.2), ylab="Protein relative abundance", xlab="Temperature (°C)", names=c(33,37,41,45,49,53,57,61,65,69))
 #Treated A
-boxplot(treated_a[2:11], ylim=c(0, 1.2), ylab="Protein relative abundance", xlab="Temperature", names=c(33,37,41,45,49,53,57,61,65,69))
+boxplot(treated_a[2:11], ylim=c(0, 1.2), ylab="Protein relative abundance", xlab="Temperature (°C)", names=c(33,37,41,45,49,53,57,61,65,69))
 #Treated B
-boxplot(treated_b[2:11], ylim=c(0, 1.2), ylab="Protein relative abundance", xlab="Temperature", names=c(33,37,41,45,49,53,57,61,65,69))
+boxplot(treated_b[2:11], ylim=c(0, 1.2), ylab="Protein relative abundance", xlab="Temperature (°C)", names=c(33,37,41,45,49,53,57,61,65,69))
 
 #Step 66
 n <- length(proteinGroups$Protein.IDs)
